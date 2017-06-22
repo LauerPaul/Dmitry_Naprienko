@@ -1,0 +1,455 @@
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 15;
+    top: 0;
+	/* Лента записей (header)*/
+	ul.nav.navbar-nav.event-ribbon {
+		letter-spacing: -0.3px;
+		text-align: right;
+		margin-right: 15px;
+		height: 48px;
+		    
+		li {
+		    width: 100%;
+		    	    
+		    a {
+			    padding: 14px 0px 17px 0px;
+			     
+		    	> span {
+					border-bottom: 1px solid transparent;
+					height: 17px;
+					display: inline-block;	
+				    position: relative;
+				    
+			    	.count {
+			    		position: absolute;
+						width: 19px;
+						height: 18px;
+						border-radius: 50%;
+						background: #e04f5f;
+						color: #ffffff;
+						font-size: 10px;
+						text-align: center;
+						top: -9px;
+						right: -17px;
+						line-height: 20px;
+						z-index: 2;
+			    	}
+			    }
+
+				&:hover {
+					> span {
+						border-color: $link-border-bottom-color;
+					}
+				}
+		    }
+		}
+	}
+	.navbar-nav.header-menu {
+		padding: 0 15px;
+
+		> li > a {
+	      padding: 14px 20px;
+	      letter-spacing: -0.4px;
+	      
+	      &:hover {
+	      	color: #ffffff;
+	      	background: $default-color-bg-menu;
+			margin: -1px 0;
+			padding: 15px 20px;
+	      }
+	    }
+		li.dropdown{
+	    	i.dropdown-arrow {
+	    		margin-left: 10px;
+	    		top: -1px;
+	    	}
+		    
+		    &:hover {
+				> a {
+					color: #ffffff;
+			      	background: $default-color-bg-menu;
+					margin: -1px 0;
+					padding: 15px 20px;
+					-webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.075);
+					box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.075);	
+				}
+				.dropdown-menu {
+					display: block;
+				}
+				i.dropdown-arrow { 
+					background-position: center bottom;
+				}
+			}
+		}
+
+    	ul.dropdown-menu {
+    		min-width: auto;
+			padding: 10px 0px 0px 0px;
+			width: 100%;
+			border-radius: 0px;
+			border: none;
+			background: $brand-primary;
+			
+			>li > a {
+				color: #ffffff;
+				padding: 2px 0px 0px 20px;
+				font-size: 13px;
+				
+				> span {
+					border-bottom: 1px solid transparent;
+				}
+				
+				&:hover {
+					background: transparent;
+					
+					> span {
+						border-color: $link-border-bottom-color;
+					}
+				}
+			}
+
+			>li:last-child {
+				padding-bottom: 11px;
+			}
+
+			> li.all-records {
+				padding-top: 11px;
+				padding-bottom: 0px;
+				
+				> a {
+					background: $brand-primary url(../../images/bg/backround-all-link-heander-menu.png);
+					background-size: cover;
+					color: #c1eef7;
+					font-family: 'Rubik-LightItalic';
+					padding: 5px 0px 8px 21px;
+					font-size: 12px;
+					
+					> span {
+						border-bottom: 1px dotted $link-border-bottom-color;
+					}
+
+					&:hover {
+						> span {
+							// border-color: transparent;
+							color: #ffffff;
+						}
+					}
+				}
+
+			}
+    	}
+	    li.dropdown.open {
+	    	> a {
+	    		color: #ffffff;
+		      	background: $default-color-bg-menu;
+				margin: -1px 0;
+				padding: 15px 20px;
+	    	}
+
+	    }
+	}
+	.navbar-nav.navbar-right.user-block {
+		width: 235px;
+		height: 48px;
+
+		/* AUTH BUTTONS */
+		span.auth-buttons {
+			margin-right: 0px;
+			font-size: 12px;
+			padding: 14px 0px 17px 15px;
+			display: inline-block;
+			letter-spacing: -0.1px;
+			width: 235px;
+
+		   	>span {
+			    margin: 0 3px;
+			    color: #bababa;
+			}
+
+			> a {
+				color: #939393;
+				
+				> span {
+					border-bottom: 1px solid rgba(186, 186, 186, 0.42);
+				}
+
+				&:hover {
+					> span {
+						border-color: transparent;
+					}
+				}
+			}
+		}
+		.profile {
+			padding: 10px 0px 8px 25px;
+			display: inline-block;
+			width: 100%;
+			
+			.user-wrapp {
+				.user-icon, .user-nick-name {
+					display: inline-block;
+					float: left;
+				}
+
+				.user-icon {
+					width: 30px;
+					height: 30px;
+					border-radius: 50%;
+					overflow: hidden;
+					position: relative;
+					margin-right: 4px;
+					background: white;
+					border: 1px solid #dedede;
+					
+					img {
+						position: absolute;
+						left: -50%;
+						right: -50%;
+						margin: auto;
+						height: 100%;
+					}
+				}
+				.user-nick-name {
+				    margin-left: 5px;
+				    font-size: 13px;
+				    padding-top: 6px;
+				    margin-right: 23px;
+				    
+				    a > span {
+				    	border-bottom: 1px solid transparent;
+				    }
+
+				    a:hover {
+				    	color: $link-color;
+				    	
+				    	> span {
+				    		border-color: $link-border-bottom-color;
+				    	}
+				    }
+				}
+			}
+
+			.profile-action-buttons {
+			    float: right;
+				height: 50px;
+			    margin-top: -11px;
+			    
+				a {
+					display: inline-block;
+					float: left;
+				    position: relative;
+					
+					&::before {
+						content: '';
+						position: absolute;
+						top: -50%;
+						bottom: -50%;
+						left: -50%;
+						right: -50%;
+						margin: auto;
+						background: url(../../images/icons/profile-header-sprite.png) no-repeat;
+					}
+				}
+
+				.relative {
+					height: 100%;
+				}
+
+				.events {
+					width: 30px;
+					height: 100%;
+					margin-right: 0px;
+					border: 1px solid #fff;
+					border-top: 0px;
+					border-bottom: 0px;
+				    	
+				    &::before {
+				    	width: 20px;
+				    	height: 20px;
+			    	    background-position: -30px -30px;
+				    }
+
+				    &:hover {
+				    	border-color: #efefef;
+				    	&::before {
+			    	    	background-position: -30px -3px;
+				    	}
+				    }
+				}
+				.events.new {
+					&::before {
+				    	width: 20px;
+				    	height: 23px;
+			    	    background-position: -60px -27px;
+			    	    bottom: -49%;
+				    }
+					&:hover {
+						&::before {
+				    	    background-position: -60px 0px;
+					    }
+				    }
+				}
+				.settings {
+					width: 30px;
+					height: 100%;
+					padding: 3px;
+					border: 1px solid #fff;
+					border-top: 0px;
+					border-bottom: 0px;
+					margin-right: 0px;
+					
+					&::before {
+						width: 20px;
+						height: 20px;
+						background-position: 0 -30px;
+					}
+				    
+				    &:hover {
+				    	border-color: #efefef;
+						&::before {
+						    background-position: 0 0;
+						}
+				    }
+				}
+
+				.open {
+					.settings {
+						border-color: #efefef;
+						background: #ffffff;
+						
+						&::before {
+						    background-position: 0 0px;
+						}
+					}
+					.events{
+						border-color: #efefef;
+						background: #ffffff;
+						&::before {
+			    	    	background-position: -30px -3px;
+				    	}
+					}
+					.events.new {
+						border-color: #efefef;
+						background: #ffffff;
+						
+						&::before {
+				    	    background-position: -60px 0px;
+					    }
+					}
+				}
+
+				.dropdown-menu {
+					padding: 0px;
+				    margin-top: -1px;
+					min-width: 158px;
+					background: #ffffff;
+				    border: 1px solid #efefef;
+					    
+					li { 
+						padding: 0px 15px;
+						
+						> span {
+							border-bottom: 1px solid #efefef;
+							display: block;
+							width: 100%;
+							
+							a {
+								background: transparent;
+								margin: 0 auto;
+								float: none;
+								color: $gray-dark;
+								font-size: 13px;
+								font-family: 'Rubik-Light';
+								padding: 10px 0px;
+								
+								&::before {
+									content: '';
+									background: transparent;
+									display: none;
+								}
+
+								&:hover {
+									color: $default-color;
+								}
+							}
+
+							.plus {
+								font-size: 16px;
+								position: relative;
+								top: 1px;
+								line-height: 5px;
+								margin-right: 10px;
+							}
+						}
+					}
+
+					li:last-child > a {
+						border-bottom: 0px;
+					}
+				}
+
+			}
+
+		}
+	}
+
+	.search-section.nav.navbar-nav.navbar-right.header-section-search {
+   		padding: 0 15px 0 25px;
+		
+		.header-button-search {
+			border: none;
+			outline: none;
+			width: 20px;
+			height: 20px;
+			background: url(../../images/icons/search-icon.png) no-repeat center top;
+			margin-top: 14px;
+			
+			&:hover {
+				background-position: center bottom;
+			}
+		}
+
+		.searsh-wrapper {
+			display: none;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			height: 100%;
+			background: #fdfdfd;
+			border-left: 1px solid $input-border;
+			border-right: 1px solid $input-border;
+			
+			.input-group {
+				height: 100%;
+				
+				input#search {
+					height: 100%;
+					outline: none;
+					border: none;
+					box-shadow: none !important;
+					background: #fdfdfd;
+					font-size: 13px;
+				}
+
+				.input-group-btn {
+					button.btn.close-serch {
+						background: #ffffff;
+						border: none;
+						border-radius: 0px;
+						border-left: transparent;
+						margin-left: -5px;
+						outline: none;
+						color: #9c9c9c;
+						
+						&:hover {
+							color: $default-color;
+						}
+					}
+				}
+			}
+
+		}
+	}
+}
