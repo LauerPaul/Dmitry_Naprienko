@@ -1,0 +1,108 @@
+.preload-wrapper {
+    height: 100%;
+	width: 100%;
+	margin: 0 auto;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    
+    .turn-text {
+	    display: inline-block;
+	    margin: 0 auto;
+	    text-align: center;
+	    font-family: 'FuturaPT-Heavy';
+	    font-size: 14px;
+	    letter-spacing: 1.5px;
+	    position: relative;
+	    z-index: 1;
+
+	    @media (min-width: 1400px){
+		    font-size: 16px;
+	    }
+
+	    > .before {
+	    	position: relative;
+
+		    &::before {
+		    	content: "";
+		    	background: url(../../images/icon/hear.png);
+				background-size: contain;
+				position: absolute;
+				display: block;
+				height: 19px;
+				bottom: -50%;
+				right: 100%;
+				width: 21px;
+				opacity: 0;
+				top: -50%;
+				margin: auto 20px auto auto;
+
+				@include transition(all 0.3s linear);
+				@include animation(headphonesIconAnimate 4s linear);
+
+				@media (max-width: 1401px){
+				    height: 16px;
+					width: 18px;
+					margin: auto 15px auto auto;
+			    }
+		    }
+
+		    span {
+				color: rgba(255, 255, 255, 0);
+		    	@include transition(all 0.3s linear);
+				@include animation(headphonesAnimate 4s linear);
+		    	animation-delay: 0.4;
+		    }
+	    
+	    }
+	    
+    }
+
+}
+
+@include keyframes(headphonesIconAnimate) {
+	0% {
+		opacity: 0;
+	}
+	5% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 1;
+	}
+	95% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@include keyframes(headphonesAnimate) {
+	0% {
+		color: rgba(255, 255, 255, 0);
+	}
+	5% {
+		color: rgba(255, 255, 255, 0);
+	}
+	20% {
+		color: rgba(255, 255, 255, 1);
+	}
+	40% {
+		color: rgba(255, 255, 255, 1);
+	}
+	60% {
+		color: rgba(255, 255, 255, 0.2);
+	}
+	80% {
+		color: rgba(255, 255, 255, 1);
+	}
+	95% {
+		color: rgba(255, 255, 255, 0.2);
+	}
+	100% {
+		color: rgba(255, 255, 255, 0);
+	}
+}
