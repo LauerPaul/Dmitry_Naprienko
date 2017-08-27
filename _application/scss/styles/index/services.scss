@@ -1,0 +1,130 @@
+.section.services {
+	
+	.title-wrapper {
+		padding-left: 0px;
+	}
+
+	.text-services {
+		height: 100vh;
+		max-width: 1380px;
+		margin: 0 auto;
+
+		.wrapper-section {
+			width: 100%;
+		}
+		
+		.wrapper {
+			width: 100%;
+			padding: 0px 2px;
+		}
+
+		.column {
+			color: $white;
+			width:33.3333%;
+			font-size: 21px;
+			line-height: 36px;
+			font-family: $mont;
+			letter-spacing: 0.5px;
+			
+			@media (max-width: 1380px) {
+				font-size: 15px;
+				line-height: 40px;
+				letter-spacing: .7px;
+				
+				&:nth-child(3) {
+					padding-left: 70px;
+				}
+
+				&:last-child {
+					padding-left: 82px;
+				}
+			}
+
+			&.second {
+				@media (max-width: 1380px) {
+					&:nth-child(3) {
+						padding-left: 59px;
+					}
+
+					&:last-child {
+						padding-left: 79px;
+					}
+				}
+			}
+		}
+
+		.title {
+		    width: 100%;
+	        margin: 37px 0 30px;
+			padding-top: 105px;
+			
+	        &.second {
+				padding-top: 45px;
+				margin-bottom: 40px;
+	        }
+
+		    h2, h3 {
+			    color: $white;
+			    font-size: 42px;
+				font-weight: 800;
+			    line-height: 63px;
+				font-family: $mont;
+				letter-spacing: 1px;
+				text-align: center;
+
+				@media (max-width: 1380px) {
+					font-size: 29px;
+					line-height: 45px;
+					letter-spacing: 3.5px;
+				}
+		    }
+		}
+
+		.item{
+
+			.decor {
+				color: $brand-primary;
+				font-family: $mont;
+			    font-size: 21px;
+			    letter-spacing: 0.5px;
+			    font-weight: 800;
+
+			    &::after {
+			    	content: '';
+			    	width: 40px;
+			    	height: 2px;
+			    	margin: 10px 20px;
+			    	background: #969696;
+		    	    display: inline-block;
+					
+					@media (max-width: 1380px) {
+						width: 30px;
+						margin: 5px 13px;
+					}
+			    }
+
+				@media (max-width: 1380px) {
+					font-size: 15px;
+				}
+				
+				&.second {
+					&::after {
+						margin-left: 0px;
+						background: $brand-primary;
+					}
+				}
+
+			}
+
+			.text-wrapp {
+				margin-top: -7px;
+				line-height: 26px;
+			}
+		}
+		
+		@media (max-width: 1380px) {
+		    max-width: 984px;
+		}
+
+	}
+}

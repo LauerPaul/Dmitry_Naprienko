@@ -1,6 +1,47 @@
 * {
 	outline: none !important;
 }
-body {
-	position: relative;
+
+.title-wrapper {
+	height: 100vh;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+
+	h1, h2 {
+		text-transform: uppercase;
+		font-family: $mont;
+		font-size: 200px;
+		font-weight: 800;
+		letter-spacing: 35px;
+		color: #0f1011;
+	}
+
+	&.normal {
+		h1, h2 {
+			text-transform: none;
+		}
+	}
+
+	&.center {
+		h1, h2 {
+			text-align: center;
+		}
+	}
+
+	@media (max-width: 1380px) {
+	    padding-left: 46px;
+		
+		h1, h2 {
+		    font-size: 142px;
+		    letter-spacing: 50px;
+		}
+
+		&.normal {
+			h1, h2 {
+				letter-spacing: 7px;
+				padding-left: 10px;
+			}
+		}
+	}
 }

@@ -76,8 +76,7 @@ var source = '_application/',
 //---------------------------------------------------------
 
 // SCSS
-gulp.task('sass', function () {
-    // console.log("-- SCSS --");
+gulp.task('sass', ['css'], function () {
     return gulp.src(path.css.in)
         .pipe(sass(path.css.sassOpts))
         .pipe(sourcemaps.init({loadMaps: true}))
@@ -88,7 +87,6 @@ gulp.task('sass', function () {
 });
 // JADE (PUG)
 gulp.task('pug', function () {
-    // console.log("-- JADE (PUG) --");
     return gulp.src(path.pug.compile)
         .pipe(gulpPugBeautify({omit_empty: true}))
         .pipe(pug({pretty: true}))
@@ -96,11 +94,17 @@ gulp.task('pug', function () {
 });
 // ECMA SCRIPT (JS)
 gulp.task("scripts", function() {
-  // console.log("-- ECMA SCRIPT (JS) --");
   return gulp.src([path.js.jquery_bower_src, path.js.bootstrap_js_src, path.js.in, path.js.tether_src])
     .pipe(include())
     .on('error', console.log)
     .pipe(gulp.dest(path.js.out));
+});
+// ECMA SCRIPT (css)
+gulp.task("css", function() {
+  return gulp.src([source + 'scss/**/*.css', source + 'scss/**/*.map'])
+    .pipe(include())
+    .on('error', console.log)
+    .pipe(gulp.dest(path.css.out));
 });
 // IMAGES COPY
 gulp.task('images', function () {
@@ -122,7 +126,6 @@ gulp.task('awesome', function() {
 });
 
 gulp.task('fonts', ['awesome'], function() {
-    // console.log("-- FONTS COPY --");
     gulp.src(path.fonts.in)
     .pipe(gulp.dest(path.fonts.out))
 });
@@ -141,5 +144,5 @@ gulp.task('default', ['sass', 'scripts', 'pug', 'fonts', 'images', 'animateCSS']
      gulp.watch(path.watch.js, ['scripts']);
      gulp.watch(path.watch.fonts, ['fonts']);
      gulp.watch(path.watch.images, ['images']);
-    console.log("-- WATCH FINISH --");
+    console.log("-- WATCH INIT --");
 });

@@ -51,6 +51,14 @@
         transition: $param;
 }
 
+@mixin transform($param) {
+-webkit-transform: $param;
+   -moz-transform: $param;
+    -ms-transform: $param;
+     -o-transform: $param;
+        transform: $param;
+}
+
 @mixin animation($param){
 	-webkit-animation: $param;
 	   -moz-animation: $param;

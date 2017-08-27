@@ -1,4 +1,9 @@
 // Variables
+
+$hind: 'Hind', sans-serif;
+$mont: 'Montserrat', sans-serif;
+
+
 //
 // Copy settings from this file into the provided `_custom.scss` to override
 // the Bootstrap defaults without modifying key, versioned files.
@@ -111,7 +116,7 @@ $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
 
 // Reassign color vars to semantic color scheme
-$brand-primary:             $blue !default;
+$brand-primary:             #803cff;
 $brand-success:             $green !default;
 $brand-info:                $teal !default;
 $brand-warning:             $orange !default;
@@ -191,10 +196,10 @@ $inverse-color: $gray-lighter !default;
 //
 // Style anchor elements.
 
-$link-color:            $brand-primary !default;
+$link-color:            #ffffff;
 $link-decoration:       none !default;
-$link-hover-color:      darken($link-color, 15%) !default;
-$link-hover-decoration: underline !default;
+$link-hover-color:      $brand-primary;
+$link-hover-decoration: none !default;
 
 
 // Grid breakpoints

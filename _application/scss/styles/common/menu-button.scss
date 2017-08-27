@@ -1,0 +1,88 @@
+.btn-menu-toggle {
+	position: fixed;
+	left: 40px;
+	top: -50px;
+	bottom: -50px;
+	margin: auto;
+	height: 60px;
+
+	background: transparent;
+	border: none;
+	outline: none !important;
+	cursor: pointer;
+    z-index: 1;
+    
+	.icon-list {
+		width: 20px;
+		height: 2px;
+		background: $white;
+		position: relative;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			width: 20px;
+			height: 2px;
+			margin: 5px 0;
+			display: block;
+			background: $white;
+			@include transition(all 0.2s);
+		}
+
+		&::before {
+			bottom: 100%;
+		}
+		
+		&::after {
+			top: 100%;
+		}
+
+	}
+
+	.text-rotate {
+		@include transform(rotate(-90deg));
+		font-family: $hind;
+		font-weight: 700;
+		letter-spacing: 2px;
+		color: $white;
+	}
+
+	&:hover {
+		.text-rotate {
+			color: $brand-primary;
+		}
+
+		.icon-list {
+
+			&::before {
+				left: -5px;
+			}
+
+			&::after {
+				left: 5px;
+				right: -5px;
+			}
+
+		}
+	}
+
+
+	@media (max-width: 1380px) {
+		left: 22px;
+   		font-size: 12px;
+		
+		.icon-list {
+			width: 14px;
+
+			&::before,
+			&::after {
+				width: 14px;
+				margin: 3px 0;
+			}
+		}
+
+	}
+}

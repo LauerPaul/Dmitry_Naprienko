@@ -1,0 +1,59 @@
+.navigation-right {
+	position: fixed;
+	right: 40px;
+	top: -50px;
+	bottom: -50px;
+	margin: auto;
+	height: 234px;
+    z-index: 1;
+    
+	.list-inline {
+		margin: 0px;
+		width: 35px;
+
+		li {
+		    width: 35px;
+		    height: 57px;
+			font-weight: 700;
+			padding: 10px 0px;
+			font-family: $hind;
+			text-align: center;
+			border-right: 2px solid #383838;
+
+			a {
+				@include transform(rotate(-90deg));
+				color: #383838;
+				height: 100%;
+				text-align: center;
+				line-height: 37px;
+				letter-spacing: 1.5px;
+			}
+
+			&:hover {
+				a {
+					// color: $white;
+				}
+			}
+
+			&.active {
+				border-color: $white;
+
+				a {
+					color: $white;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1380px) {
+		right: 28px;
+		height: 170px;
+
+		.list-inline {
+			li {
+				height: 42px;
+				font-size: 12px;
+			}
+		}
+	}
+}
