@@ -46,51 +46,46 @@
 		&:nth-child(2) {
 		    padding-left: 28px;
 			
-			label {
-				.form-control {
-				    max-width: 60%;
-				}
-			}
 		}
 
 		&:nth-child(3) {
 		    padding-left: 56px;
-
-			label {
-					.form-control {
-					    max-width: 73%;
-					}
-			}
 		}
 
-		label {
-			span {
-				font-size: 21px;
-				font-family: $mont;
-				color: $brand-primary;
-				line-height: 36px;
-				letter-spacing: 0.5px;
-				position: relative;
-				top: 8px;
-				
-				@media (max-width: 1380px) {
-					font-size: 15px;
-					line-height: 21px;
-				}
+		p.decor {
+			font-size: 21px;
+			font-family: $mont;
+			color: $brand-primary;
+			line-height: 36px;
+			letter-spacing: 0.5px;
+			position: relative;
+			top: 8px;
+			margin-bottom: 26px;
+			margin-top: 0px;
+			
+			@media (max-width: 1380px) {
+				font-size: 15px;
+				line-height: 21px;
 			}
 
-
-			.form-control {
+			&::after {
+				content: "";
+				width: 61%;
+				height: 2px;
+				background: #969696;
 				display: inline-block;
-				max-width: 70%;
-				margin-left: 21px;
-				background: transparent;
-				border: none;
-				border-bottom: 2px solid #ffffff;
-				border-radius: 0px;
-				padding-top: 0px;
-				padding-bottom: 0px;
+				margin-left: 27px;
+				position: relative;
+				top: -5px;
 			}
+
+		}
+		&:last-child {
+			p.decor {
+				&::after {
+					width: 71%;
+				}	
+			}	
 		}
 
 		> p {
