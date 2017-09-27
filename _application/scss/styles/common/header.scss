@@ -1,6 +1,6 @@
 header {
 	position: fixed;
-	top: 0;
+	top: -70px;
 	left: 0;
 	right: 0;
 
@@ -12,6 +12,11 @@ header {
 	font-size: 21px;
     z-index: 1;
     
+    &.animate {
+		top: 0;
+		@include animation(header 1s);
+    }
+
 	.column {
 		width: 50%;
 	}
@@ -20,4 +25,10 @@ header {
 	    padding: 24px 25px;
 	    font-size: 14px;
 	}
+}
+
+@include keyframes (header){
+	from {top: -70px;opacity: 0;}
+	50% {opacity: 0;}
+	to {top: 0px;opacity: 1;}
 }

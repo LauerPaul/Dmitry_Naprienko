@@ -1,8 +1,10 @@
-footer.fixed-bottom {
+footer {
     left: auto;
+    right: 0;
 }
-.footer.fixed-bottom {
+.footer {
     right: auto;
+    left: 0
 }
 
 .footer, footer {
@@ -12,6 +14,14 @@ footer.fixed-bottom {
 	letter-spacing: 0.75px;
 	font-size: 14px;
     z-index: 1;
+    bottom: -75px;
+    z-index: 1030;
+    position: fixed;
+
+    &.animate {
+		bottom: 0;
+		@include animation(footer 1s);
+    }
 
 	.social {
 		margin: 0px;
@@ -85,4 +95,10 @@ footer.fixed-bottom {
 
 	}
 
+}
+
+@include keyframes (footer){
+	from {bottom: -70px;opacity: 0;}
+	50% {opacity: 0;}
+	to {bottom: 0px;opacity: 1;}
 }

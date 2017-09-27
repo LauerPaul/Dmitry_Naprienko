@@ -28,9 +28,23 @@ var app = {
 	index: function(){
 		console.log('index');
 	}
+},
+indexFuncs = {
+	start: function(index){
+		$('header, .footer, footer').addClass('animate');
+		
+		if(index == 1){
+			setTimeout(function(){indexFuncs.designer()}, 900);
+			setTimeout(function(){$('.btn-menu-toggle, .navigation-right').addClass('animate');}, 2000);
+		}
+	},
+	designer: function(){
+		$('.section.designer .designer-text h2').addClass('animate')
+		setTimeout(function(){$('.section.designer .title-wrapper h1').addClass('animate');}, 600);
+	}
 }
 
-$(document).ready(function() {
+window.onload = setTimeout(function() {
 	$('#fullpage').fullpage({
 		//Navigation
 		menu: '#navigation',
@@ -96,12 +110,18 @@ $(document).ready(function() {
 		lazyLoading: true,
 
 		//events
-		onLeave: function(index, nextIndex, direction){},
-		afterLoad: function(anchorLink, index){},
+		onLeave: function(index, nextIndex, direction){
+			console.log(index);
+			console.log(nextIndex);
+		},
+
+		afterLoad: function(anchorLink, index){
+			indexFuncs.start(index)
+		},
 		afterRender: function(){},
 		afterResize: function(){},
 		afterResponsive: function(isResponsive){},
 		afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
 		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
 	});
-});
+}, 2000);

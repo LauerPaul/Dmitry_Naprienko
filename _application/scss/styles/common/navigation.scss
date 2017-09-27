@@ -1,6 +1,6 @@
 .navigation-right {
 	position: fixed;
-	right: 40px;
+	right: -70px;
 	top: -50px;
 	bottom: -50px;
 	margin: auto;
@@ -45,9 +45,21 @@
 		}
 	}
 
+	@media (min-width: 1381px) {
+		&.animate {
+			right: 40px;
+			@include animation(menuR 1s);
+	    }
+	}
+
 	@media (max-width: 1380px) {
-		right: 28px;
+		right: -35px;
 		height: 170px;
+
+		&.animate {
+			right: 28px;
+			@include animation(menuR 1s);
+		}
 
 		.list-inline {
 			li {
@@ -55,5 +67,20 @@
 				font-size: 12px;
 			}
 		}
+	}
+}
+
+@media (min-width: 1381px) {
+	@include keyframes (menuR){
+		from {right: -70px;opacity: 0;}
+		50% {opacity: 0;}
+		to {right: 40px;opacity: 1;}
+	}
+}
+@media (max-width: 1380px) {
+	@include keyframes (menuR){
+		from {right: -35px;opacity: 0;}
+		50% {opacity: 0;}
+		to {right: 28px;opacity: 1;}
 	}
 }
