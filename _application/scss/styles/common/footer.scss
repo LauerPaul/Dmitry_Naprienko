@@ -8,7 +8,7 @@ footer {
 }
 
 .footer, footer {
-	padding: 40px;
+	padding: 34px 39px 34px 40px;
 	font-family: $mont;
 	font-weight: 400;
 	letter-spacing: 0.75px;
@@ -17,6 +17,10 @@ footer {
     bottom: -75px;
     z-index: 1030;
     position: fixed;
+    
+	@media (min-width: 1381px) {
+		letter-spacing: 1px;
+	}    
 
     &.animate {
 		bottom: 0;
@@ -46,12 +50,15 @@ footer {
 		border: none;
 		outline: none;
 		color: $white;
-
 		font-family: $mont;
 		font-weight: 400;
 		letter-spacing: 0.75px;
 		font-size: 14px;
 		cursor: pointer;
+		
+		@media (min-width: 1381px) {
+			letter-spacing: 1.2px;
+		}
 
 		&:hover {
 			color: $brand-primary;
@@ -91,8 +98,18 @@ footer {
 
 		.list-inline-item:not(:last-child) {
 		    margin-right: 12px;
+			
+			@media (min-width: 1381px) {
+			    margin-right: 34px;
+			}
 		}
 
+	}
+
+	@media (min-width: 1381px) {
+		.list-inline-item:not(:last-child) {
+		    margin-right: 34px;
+		}
 	}
 
 }

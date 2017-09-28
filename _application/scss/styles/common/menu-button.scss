@@ -5,7 +5,6 @@
 	bottom: -50px;
 	margin: auto;
 	height: 60px;
-
 	background: transparent;
 	border: none;
 	outline: none !important;
@@ -48,6 +47,11 @@
 		font-weight: 700;
 		letter-spacing: 2px;
 		color: $white;
+		
+		@media (min-width: 1381px) {
+			letter-spacing: 3px;
+		}
+
 	}
 
 	&:hover {
@@ -71,13 +75,12 @@
 	
 	@media (min-width: 1381px) {
 		&.animate {
-			left: 40px;
+			left: 35px;
 			@include animation(menu 1s);
 	    }
 	}
 
 	@media (max-width: 1380px) {
-		// left: 22px;
    		font-size: 12px;
 		
 		&.animate {
@@ -102,7 +105,7 @@
 	@include keyframes (menu){
 		from {left: -75px;opacity: 0;}
 		50% {opacity: 0;}
-		to {left: 40px;opacity: 1;}
+		to {left: 35px;opacity: 1;}
 	}
 }
 @media (max-width: 1380px) {

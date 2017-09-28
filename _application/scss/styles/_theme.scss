@@ -16,6 +16,10 @@
 		letter-spacing: 35px;
 		color: #0f1011;
 		position: relative;
+		
+		@media (min-width: 1381px) {
+			letter-spacing: 70px;
+		}		
 
 		&::before {
 			content: '';

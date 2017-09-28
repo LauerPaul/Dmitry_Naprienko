@@ -32,10 +32,21 @@ var app = {
 indexFuncs = {
 	start: function(index){
 		$('header, .footer, footer').addClass('animate');
-		
-		if(index == 1){
-			setTimeout(function(){indexFuncs.designer()}, 900);
-			setTimeout(function(){$('.btn-menu-toggle, .navigation-right').addClass('animate');}, 2000);
+
+		switch(index) {
+			case 1:
+				setTimeout(function(){indexFuncs.designer()}, 900);
+				setTimeout(function(){$('.btn-menu-toggle, .navigation-right').addClass('animate');}, 2000);
+				break;
+			case 2:
+				setTimeout(function(){$('.btn-menu-toggle, .navigation-right').addClass('animate');}, 2000);
+				break;
+			case 3:
+				setTimeout(function(){$('.btn-menu-toggle, .navigation-right').addClass('animate');}, 2000);
+				break;
+			case 4:
+				setTimeout(function(){$('.btn-menu-toggle, .navigation-right').addClass('animate');}, 2000);
+				break;
 		}
 	},
 	designer: function(){

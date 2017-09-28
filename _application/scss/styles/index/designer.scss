@@ -1,4 +1,13 @@
 .section.designer {
+	
+	@media (min-width: 1381px) {
+		.title-wrapper {
+			h1, h2 {
+				    margin-left: 60px;
+				}
+		}
+	}
+
 	.designer-text {
 		height: 100vh;
 		width: 100%;
@@ -9,12 +18,17 @@
 			font-family: $mont;
 			font-size: 60px;
 			font-weight: 800;
-			letter-spacing: 10px;
+			letter-spacing: 6.2px;
 			color: $white;
 			position: relative;
 			
 			> span {
 				color: $brand-primary;
+			}
+
+			@media (min-width: 1381px) {
+				margin-left: 10px;
+			    line-height: 80px;
 			}
 
 			@media (max-width: 1380px) {
@@ -70,7 +84,12 @@
 		letter-spacing: 0.75px;
 		cursor: pointer;
 	    z-index: 10;
-
+		
+		@media (min-width: 1381px) {
+			width: 110px;
+			bottom: 33px;
+			letter-spacing: 1.2px;
+		}	
 	
 		&::before {
 			content: '';
@@ -81,7 +100,7 @@
 			left: -50%;
 			right: -50%;
 			margin: auto;
-			bottom: 50px;
+			bottom: 56px;
 
 			@media (max-width: 1380px) {
 		    	height: 56px;

@@ -3,7 +3,6 @@ header {
 	top: -70px;
 	left: 0;
 	right: 0;
-
 	padding: 40px;
 	font-family: $hind;
 	font-weight: 700;
@@ -25,6 +24,10 @@ header {
 	    padding: 24px 25px;
 	    font-size: 14px;
 	}
+    @media (min-width: 1381px) {
+        padding: 33px 35px 33px 39px;
+    	letter-spacing: 5px;
+    }
 }
 
 @include keyframes (header){

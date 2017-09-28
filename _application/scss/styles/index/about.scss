@@ -1,4 +1,15 @@
 .section.about {
+	@media (min-width: 1381px) {
+		.title-wrapper {
+			h1, h2 {
+			    letter-spacing: 11px !important;
+   				word-spacing: 0px;
+		    	margin-top: -24px;
+    			margin-left: 10px;
+			}
+		}
+	}
+
 	.text-about {
 		height: 100vh;
 		max-width: 1380px;
@@ -12,11 +23,29 @@
 			font-family: $mont;
 			padding-left: 130px;
 			letter-spacing: 0.3px;
+			
+			@media (min-width: 1381px) {
+			    padding-left: 181px;
+			    letter-spacing: .3px;
+			    word-spacing: 1.5px;
+			    font-size: 17px;
+			    
+			    p {
+		    	    margin-bottom: 22px;
+			    }
+			}
 
 			&.float-right {
 				padding-left: 122px;
-				font-size: 21px;
-				line-height: 30px;
+				
+				@media (min-width: 1381px) {
+					padding-left: 170px;
+					font-size: 21px;
+					line-height: 36px;
+					margin-top: -6px;
+					letter-spacing: 1.5px;
+					word-spacing: 0.5px;
+				}
 				
 				@media (max-width: 1380px) {
 					line-height: 25px;
@@ -29,6 +58,10 @@
 		.title {
 		    width: 100%;
 	        margin: 37px 0;
+		
+			@media (min-width: 1381px) {
+			    margin: 51px 0 56px;
+			}
 
 		    h3 {
 			    color: $white;
@@ -36,7 +69,7 @@
 				font-weight: 800;
 			    line-height: 63px;
 				font-family: $mont;
-				letter-spacing: 1px;
+				letter-spacing: 4px;
 
 				@media (max-width: 1380px) {
 					font-size: 29px;
