@@ -82,6 +82,10 @@
 	}
 }
 
+section {
+	position: relative;
+}
+
 @include keyframes (afterMask){
 	from {width: 100%;}
 	to {width: 0%}
@@ -105,11 +109,26 @@
 	to {color: rgba(15, 16, 17, 1);}
 }
 
+.mask-nextPage {
+    top: 0;
+    z-index: 50;
+	width: 0%;
+	height: 20px;
+	position: fixed;
+	background: $brand-primary;
+	
+	&.animate {
+		height: 0%;
+		width: 100%;
+		@include animation(nextPage 1.4s);
+	}
 
-    // -webkit-animation: line-scroll 3s ease-in-out infinite;
-    // animation: line-scroll 3s ease-in-out infinite;
-@include keyframes (line-scroll) {
-	0% {background-position: 0 -80px;}
-	80% {background-position: 0 0px;}
-	100% {background-position: 0 80px;}
+}
+
+@include keyframes (nextPage){
+	0% {width: 0%;height: 20px;}
+	35% {width: 100%;height: 20px;}
+	70% {height: 100%;width: 100%;}
+	71% {height: 100%;width: 100%;bottom:0; top:0%;}
+	100% {height: 0%;bottom:0; top:100%;}
 }
