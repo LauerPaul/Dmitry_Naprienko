@@ -27,7 +27,8 @@
         <li data-menuanchor="contacts"><a class="list-inline-item" href="#contacts">04</a></li>
       </ul>
     </nav>
-    <button class="btn-menu-toggle" type="button"><span class="icon-list d-inline-block"></span><span class="text-rotate d-inline-block">MENU</span></button>
+    <button class="btn-menu-toggle" type="button" onclick="$('body').addClass('menuOpen')"><span class="icon-list d-inline-block"></span><span class="text-rotate d-inline-block">MENU</span></button>
+    <button class="btn-menu-toggle close" type="button" onclick="$('body').removeClass('menuOpen')"><span class="icon-list d-inline-block"></span><span class="text-rotate d-inline-block">close</span></button>
     <div id="fullpage">
       <section class="section designer">
         <div class="title-wrapper d-flex justify-content-center align-items-center"> 
@@ -149,5 +150,27 @@
         </ul>
       </div>
     </footer>
+    <div class="mask-nextPage"></div>
+    <div class="menu">
+      <div class="menu-wrapper d-flex justify-content-center align-items-center"> 
+        <div class="navigation d-flex align-items-center"> 
+          <nav>
+            <ul>
+              <li><a href="#designer">Main</a></li>
+              <li><a href="#designer">About me</a></li>
+              <li><a href="#designer">Services</a></li>
+              <li><a href="#designer">Contacts</a></li>
+            </ul>
+          </nav>
+        </div><a class="portfolio-text d-flex align-items-center flex-wrap" href="#">
+          <div>
+            <p>port <span>-</span></p>
+            <div>
+              <p class="mini">View portfolio</p>
+            </div>
+            <p>folio</p>
+          </div></a>
+      </div><a class="line-bottom" href="#"><span>terms of cooperation</span></a>
+    </div>
   </body>
 </html>

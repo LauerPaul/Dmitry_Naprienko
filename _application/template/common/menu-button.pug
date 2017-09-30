@@ -1,3 +1,7 @@
-button.btn-menu-toggle(type="button")
+button.btn-menu-toggle(type="button", onclick="$('body').addClass('menuOpen')")
 	span.icon-list.d-inline-block
 	span.text-rotate.d-inline-block MENU
+
+button.btn-menu-toggle.close(type="button", onclick="$('body').removeClass('menuOpen')")
+	span.icon-list.d-inline-block
+	span.text-rotate.d-inline-block close
