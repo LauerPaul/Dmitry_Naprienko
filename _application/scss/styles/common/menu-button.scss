@@ -116,6 +116,11 @@
 			font-size: 16px;
 			font-weight: 600;
 		    text-transform: uppercase;
+
+			@media (max-width: 1380px) {
+			    font-size: 12px;
+				margin-left: 5px;
+			}
 		}
 		.icon-list {
 			background: rgba(255,255,255,0);
@@ -126,6 +131,10 @@
 				top: -5px;
 				left: 5px;
 				width: 25px;
+
+				@media (max-width: 1380px) {
+					width: 17px;
+				}
 			}
 
 			&::after {
@@ -134,6 +143,10 @@
 				top: -5px;
 				width: 26px;
 				left: 4px;
+
+				@media (max-width: 1380px) {
+					width: 17px;
+				}
 			}
 		}
 

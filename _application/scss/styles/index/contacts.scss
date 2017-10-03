@@ -33,8 +33,58 @@
 			color: $white;
 	        line-height: 50px;
 	        
-			> span {
+			span:not(.animation_item) {
 				color: $brand-primary;
+			}
+
+			> span.animation_item {
+				position: relative;
+
+				&::before {
+					content: '';
+					width: 100%;
+					height: 100%;
+					background: $brand-primary;
+					position: absolute;
+					right: 0;
+				}
+
+				&::after {
+					content: '';
+					width: 100%;
+					height: 100%;
+					background: $body-bg;
+					position: absolute;
+					right: 0;
+				}
+
+				&.animate {
+					@include animation(opacityText 0.6s);
+
+					&::after {
+						width: 0%;
+						@include animation(afterMask 0.6s ease-in-out);
+					}
+					&::before {
+						width: 0%;
+						@include animation(afterMask 0.9s ease-in-out);
+					}
+				}
+
+				&:nth-child(2){
+					&.animate {
+						@include animation(opacityText 0.6s);
+
+						&::after {
+							width: 0%;
+							@include animation(afterMask 0.3s ease-in-out);
+						}
+						&::before {
+							width: 0%;
+							@include animation(afterMask 0.6s ease-in-out);
+						}
+					}
+				}
 			}
 
 			@media (max-width: 1380px) {
@@ -88,6 +138,31 @@
 				}
 			}
 		}
+		
+		p:not(.decor) {
+			span {
+				position: relative;
+			    padding-left: 1px;
+
+				&::after {
+					content: '';
+					width: 100%;
+					height: 100%;
+					background: $body-bg;
+					position: absolute;
+					right: 0;
+				}
+
+				&.animate {
+					@include animation(opacityText 0.6s);
+
+					&::after {
+						width: 0%;
+						@include animation(afterMask 0.6s ease-in-out);
+					}
+				}
+			}
+		}
 
 		p.decor {
 			font-size: 21px;
@@ -96,10 +171,17 @@
 			line-height: 36px;
 			letter-spacing: 0.5px;
 			position: relative;
-			top: 8px;
+			top: -20px;
 			margin-bottom: 26px;
 			margin-top: 0px;
-			
+			opacity: 0;
+
+			&.animate {
+				opacity: 1;
+				top: 8px;
+				@include animation(contactsText 0.6s);
+			}
+
 			@media (max-width: 1380px) {
 				font-size: 15px;
 				line-height: 21px;
@@ -144,13 +226,19 @@
 
 			@media (max-width: 1380px) {
 				font-size: 15px;
-				line-height: 21px;
+				line-height: 19px;
 			}
 		}
 	}
 	.button-wrapper {
 	    margin-top: 90px;
 	    text-align: center;
+	    opacity: 0;
+
+	    &.animate {
+	    	opacity: 1;
+			@include animation(servicesText 0.5s);
+	    }
 	    
 		@media (min-width: 1381px) {
 		    margin-top: 132px;
@@ -212,5 +300,16 @@
 				text-decoration: underline;
 			}
 		}
+	}
+}
+
+@include keyframes (contactsText) {
+	0% {
+		opacity: 0;
+		top: -20px;
+	}
+	100% {
+		opacity: 1;
+		top: 8px;
 	}
 }

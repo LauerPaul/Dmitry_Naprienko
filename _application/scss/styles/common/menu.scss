@@ -27,6 +27,13 @@
 	    letter-spacing: 3.4px;
 	    text-align: center;
 	    line-height: 51px;
+
+		@media (max-width: 1380px) {
+			font-size: 12px;
+	    	line-height: 40px;
+			bottom: 28px;
+			width: 260px;
+		}    
 	    
 	    &::before {
 	    	content: '';
@@ -53,6 +60,10 @@
     max-width: 1190px;
     margin: auto;
     height: 100%;
+
+	@media (max-width: 1380px) {
+		max-width: 845px;
+    }
     
     .navigation {
     	width: 50%;
@@ -70,7 +81,12 @@
 					font-weight: 900;
 				    margin-bottom: 22px;
 				    letter-spacing: 6px;
-				    
+					
+					@media (max-width: 1380px) {
+						font-size: 46px;
+					    margin-bottom: 10px;
+				    }
+
 				    a {
 				    	@include transition(all 0.2s);
 				    	&:hover {
@@ -86,6 +102,11 @@
 	    height: 100%;
 	    padding-left: 103px;
 	    padding-top: 18px;
+
+		@media (max-width: 1380px) {
+			padding-left: 75px;
+		}
+
 	    
 	    p {
 	    	font-family: $mont;
@@ -96,12 +117,22 @@
 			letter-spacing: 44px;
 		    line-height: 64px;
 		    color: $white;
-			
+	
+			@media (max-width: 1380px) {
+				font-size: 68px;
+			    line-height: 42px;
+				letter-spacing: 33px;
+			}
+
 			span {
 			    letter-spacing: 0;
 				margin-left: -75px;
+		
+				@media (max-width: 1380px) {
+					margin-left: -55px;
+				}
 			}
-			
+
 			&.mini {
 				font-size: 16px;
 		    	font-family: $hind;
@@ -110,6 +141,11 @@
 			    text-align: center;
 			    padding-right: 11px;
 			    word-spacing: 2px;
+
+				@media (max-width: 1380px) {
+					font-size: 14px;
+					letter-spacing: 18px;
+				}
 			}
 	    }
     }

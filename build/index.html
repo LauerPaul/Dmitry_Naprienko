@@ -1,5 +1,8 @@
 
 <html lang="en">
+  <audio loop="loop" preload="true" id="audioBg">
+    <source src="media/audio_bg.mp3" type="audio/mpeg"/>
+  </audio>
   <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -36,16 +39,20 @@
         </div>
         <div class="designer-text d-flex justify-content-center align-items-center">
           <h2>Creative &<span>&nbsp;Perfectly</span>&nbsp;Executed Design</h2>
-        </div><a class="scroll-bottom"><span>Scroll down</span></a>
+        </div><a class="scroll-bottom" onclick="$.fn.fullpage.moveSectionDown();"><span>Scroll down</span></a>
       </section>
       <section class="section about">
         <div class="title-wrapper normal d-flex justify-content-center align-items-center"> 
-          <h2 class="animate">About me</h2>
+          <h2>About me</h2>
         </div>
         <div class="text-about d-flex justify-content-center align-items-center flex-wrap">
           <div>
             <div class="title" style="padding-top: 75px;">
-              <h3>Dmitry Naprienko —</br>Creative Designer</h3>
+              <h3 class="title-animation"> 
+                <div>Dmitry Naprienko —</div>
+                <div>Creative Designer</div>
+                <div class="clearfix"></div>
+              </h3>
             </div>
             <div class="column float-left">
               <p>Specialize in design creation for websites and mobile applications.</p>
@@ -60,13 +67,13 @@
       </section>
       <section class="section services">
         <div class="title-wrapper normal center d-flex justify-content-center align-items-center services">
-          <h1 class="animate">Services</h1>
+          <h1>Services</h1>
         </div>
         <div class="text-services d-flex justify-content-center flex-wrap">
           <div class="wrapper-section">
-            <div class="wrapper">
+            <div class="wrapper first">
               <div class="title">
-                <h2>Specialization</h2>
+                <h2> <span>Specialization</span></h2>
               </div>
               <div class="column float-left">
                 <div class="item"><span class="decor">001</span>UI & Web Design</div>
@@ -84,7 +91,7 @@
             </div>
             <div class="wrapper second-wrap">
               <div class="title second">
-                <h3>The target audience</h3>
+                <h3><span>The target audience</span></h3>
               </div>
               <div class="column float-left second">
                 <div class="item"><span class="decor second float-left"></span>
@@ -108,25 +115,25 @@
       </section>
       <section class="section contacts">
         <div class="title-wrapper normal center d-flex justify-content-center align-items-center">
-          <h1 class="animate">Contacts</h1>
+          <h1>Contacts</h1>
         </div>
         <div class="text-contacts d-flex justify-content-center flex-wrap align-items-center">
           <div class="wrapper-section">
             <div class="contacts-title">
-              <h4>Do you have an interesting project?<br>Let's talk about that!</h4>
+              <h4> <span class="animation_item">Do you have an interesting project?</span><br><span class="animation_item">Let's talk about that!</span></h4>
             </div>
             <div>
               <div class="column">
                 <p class="decor">Email</p>
-                <p>dmitrynaprienko@gmail.com</p>
+                <p> <span>dmitrynaprienko@gmail.com</span></p>
               </div>
               <div class="column">
                 <p class="decor">Location</p>
-                <p>Kyiv, Ukraine</p>
+                <p> <span>Kyiv, Ukraine</span></p>
               </div>
               <div class="column">
                 <p class="decor">Skype</p>
-                <p>dmitry_naprienko</p>
+                <p> <span>dmitry_naprienko</span></p>
               </div>
               <div class="clearfix"></div>
               <div class="button-wrapper">
@@ -139,7 +146,7 @@
       </section>
     </div>
     <div class="footer float-left">
-      <button class="volume-toggle" data-toggle-text="Music doesn't play">Music plays</button>
+      <button class="volume-toggle off" data-toggle-text="Music doesn't play">Music plays</button>
     </div>
     <footer>
       <div class="column float-right text-right">
