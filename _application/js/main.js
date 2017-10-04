@@ -1,5 +1,5 @@
 var global_status=true,
-audioBg = document.getElementById("audioBg"),
+audioBg,
 app = {
 	load: function(){
 	    $('.creative').textillate({
@@ -271,6 +271,7 @@ $(document).on('click', '.volume-toggle', function(){
 		audioBg.pause();
 	}
 }).ready(function() {
+	audioBg = document.getElementById("audioBg");
 	var music = sessionStorage.getItem('music');
 	if(music == null){
 		$('.volume-toggle').removeClass('off');

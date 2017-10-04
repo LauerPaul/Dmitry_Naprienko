@@ -35,8 +35,10 @@
 			}
 
 			&:hover {
+				border-color: $white;
+				
 				a {
-					// color: $white;
+					color: $brand-primary;
 				}
 			}
 

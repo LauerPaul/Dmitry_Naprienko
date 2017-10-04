@@ -70,12 +70,12 @@ footer {
 			height: 18px;
 			margin-right: 20px;
 			display: inline-block;
-			background: url(../../images/icon/volume_toggle.png) no-repeat left bottom;
+			background: url(../../images/icon/music_play.gif) no-repeat center;
 		}
 
 		&.off {
 			&::before {
-				background-position: right bottom;
+				background: url(../../images/icon/volume_toggle.png) no-repeat right bottom;
 			}
 		}
 	}

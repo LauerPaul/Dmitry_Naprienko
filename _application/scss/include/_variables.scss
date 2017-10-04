@@ -249,7 +249,7 @@ $grid-gutter-widths: (
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-sans-serif: $mont;
 $font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:       $font-family-sans-serif !default;
@@ -815,8 +815,8 @@ $modal-header-border-width:   $modal-content-border-width !default;
 $modal-footer-border-width:   $modal-header-border-width !default;
 $modal-header-padding:        15px !default;
 
-$modal-lg:                    800px !default;
-$modal-md:                    500px !default;
+$modal-lg:                    1460px !default;
+$modal-md:                    1000px !default;
 $modal-sm:                    300px !default;
 
 $modal-transition:            transform .3s ease-out !default;

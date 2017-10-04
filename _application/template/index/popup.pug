@@ -1,0 +1,25 @@
+.modal.fade.contatcsModal(tabindex="-1", role="dialog", aria-labelledby="myLargeModalLabel", aria-hidden="true")
+	.modal-dialog.modal-lg
+		.modal-content
+			form(action="")
+				button(type="button", data-dismiss="modal", aria-label="Close").close
+					span
+				h2.title It’s time, let’s start a project!<br>Together we will find a creative solution.
+				.container-fluid
+					.row
+						.col-md-4
+							p.label Full name
+							input(type="text", name="name", placeholder="Your full name").form-control
+						.col-md-4
+							p.label email address
+							input(type="text", name="mail", placeholder="Your email address").form-control
+						.col-md-4
+							p.label company name
+							input(type="text", name="company", placeholder="Name of your company").form-control
+					.row
+						.col-md-12
+							p.label your message
+							textarea(type="text", name="message", placeholder="Your message or comment").form-control
+					.row
+						.col-md-12
+							button.send(type="button") send
