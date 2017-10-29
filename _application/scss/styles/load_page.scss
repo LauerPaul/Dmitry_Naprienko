@@ -5,12 +5,23 @@
     color: #ffffff;
     position: relative;
     overflow: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    background-color: #212121;
+
+    &.d-none {
+    	display: none !important;
+    }
     
     .turn-text {
 	    display: inline-block;
 	    margin: 0 auto;
 	    text-align: center;
-	    font-family: 'FuturaPT-Heavy';
+	    font-family: $hind;
 	    font-size: 14px;
 	    letter-spacing: 1.5px;
 	    position: relative;
@@ -52,10 +63,43 @@
 		    	@include transition(all 0.3s linear);
 				@include animation(headphonesAnimate 4s linear);
 		    	animation-delay: 0.4;
+		    	text-transform: uppercase;
 		    }
 	    
 	    }
 	    
+    }
+
+    .title-wrapper {
+    	position: absolute;
+    	top: -50%;
+    	bottom: -50%;
+    	left: -50%;
+    	right: -50%;
+    	margin: auto;
+    	max-width: 90vw;
+	    font-weight: 800;
+    	font-family: $mont;
+    	text-transform: uppercase;
+
+    	.animate {
+    		color: rgba(255,255,255,0.09) !important;
+			position: absolute;
+			text-align: center;
+
+			&::after, &::before {
+				display: none !important;
+				content: none;
+			}
+
+			&.item2 {
+				opacity: 0;
+				@include animation(animText2 5s linear infinite);
+			}
+			&.item1 {
+				@include animation(animText 5s linear infinite);
+			}
+    	}
     }
 
 }
@@ -78,6 +122,54 @@
 	}
 	100% {
 		opacity: 0;
+	}
+}
+@include keyframes(animText) {
+	0% {
+		opacity: 1;
+	    font-size: 142px;
+	    line-height: 142px;
+	}
+	20% {
+		opacity: 0;
+	    line-height: 142px;
+	}
+	60% {
+		opacity: 0;
+	    font-size: 100px;
+	    line-height: 142px;
+	}
+	100% {
+		opacity: 1;
+	    font-size: 142px;
+	    line-height: 142px;
+	}
+}
+@include keyframes(animText2) {
+	0% {
+		opacity: 0;
+	    font-size: 100px;
+	    line-height: 142px;
+	}
+	20% {
+		opacity: 0;
+	    font-size: 100px;
+	    line-height: 142px;
+	}
+	35% {
+		opacity: 1;
+	    font-size: 142px;
+	    line-height: 142px;
+	}
+	60% {
+		opacity: 1;
+	    font-size: 142px;
+	    line-height: 142px;		
+	}
+	100% {
+		opacity: 0;
+	    font-size: 130px;
+	    line-height: 142px;
 	}
 }
 @include keyframes(headphonesAnimate) {

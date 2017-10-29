@@ -55,7 +55,8 @@
 		font-weight: 700;
 		letter-spacing: 2px;
 		color: $white;
-		
+		text-shadow: none;
+
 		@media (min-width: 1381px) {
 			letter-spacing: 3px;
 		}
@@ -116,6 +117,7 @@
 			font-size: 16px;
 			font-weight: 600;
 		    text-transform: uppercase;
+			text-shadow: none;
 
 			@media (max-width: 1380px) {
 			    font-size: 12px;
@@ -152,19 +154,42 @@
 
 		&:hover {
 			.text-rotate {
-				color: $white;
+				color: #383838;
 			}
-			.icon-list {	
-				&::before {
-					top: -8px;
-					left: 8px;
-				}
-				&::after {
-				    top: -10px;
-				    left: 2px;
-				}				
+		// 	.icon-list {	
+		// 		&::before {
+		// 			top: -8px;
+		// 			left: 8px;
+		// 		}
+		// 		&::after {
+		// 		    top: -10px;
+		// 		    left: 2px;
+		// 		}				
+		// 	}
+		}
+	}
+}
+
+#terms:not(.menuOpen) {
+	.btn-menu-toggle{
+		.text-rotate {
+			color: #383838;
+		}
+		.icon-list{
+			background: #383838;
+
+			&::before,
+			&::after {
+				background: #383838;
 			}
 		}
+
+		&:hover {
+			.text-rotate {
+				color: $brand-primary;
+			}
+		}
+
 	}
 }
 

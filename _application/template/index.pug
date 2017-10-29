@@ -2,7 +2,7 @@ html(lang='en')
 	include common/head
 	body
 		audio(loop, preload="true")#audioBg
-		    source(src="media/audio_bg.mp3", type="audio/mpeg")
+		    source(src="media/audio_bg.mp3", type="audio/mpeg", volume="0.5")
 		
 		include common/header
 		include common/navigation
@@ -17,4 +17,6 @@ html(lang='en')
 		include common/footer
 		.mask-nextPage
 		include common/menu
+		include common/load_page
 		include index/popup
+		

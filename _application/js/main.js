@@ -1,33 +1,5 @@
 var global_status=true,
 audioBg,
-app = {
-	load: function(){
-	    $('.creative').textillate({
-            effect: 'bounceInLeft',
-            loop: true,
-            initialDelay: 0,
-            minDisplayTime: 1000,
-            autoStart: true,
-            inEffects: [],
-            outEffects: [ 'fadeOutUpBig' ],
-            in: {
-		      effect: 'fadeInUpRight',
-		      delayScale: 1.5,
-		      delay: 50,
-		      sync: true,
-		      shuffle: false
-		    },
-		    out: {
-		      effect: 'flip',
-		      delayScale: 1.5,
-		      delay: 50,
-		      sync: false,
-		      shuffle: false,
-		    },
-		    type: 'word'
-	    });
-	}
-},
 indexFuncs = {
 	start: function(index){
 		$('header, .footer, footer').addClass('animate');
@@ -270,18 +242,20 @@ $(document).on('click', '.volume-toggle', function(){
 		sessionStorage.setItem('music', '0');
 		audioBg.pause();
 	}
-}).ready(function() {
-	audioBg = document.getElementById("audioBg");
-	var music = sessionStorage.getItem('music');
-	if(music == null){
-		$('.volume-toggle').removeClass('off');
-		sessionStorage.setItem('music', '1');
-		audioBg.play();
-	}
-	else {
-		if(music == 1 && $(audioBg).length > 0){
+})
+	document.addEventListener("DOMContentLoaded", function(){
+		$('.preload-wrapper').addClass('d-none');
+		audioBg = document.getElementById("audioBg");
+		var music = sessionStorage.getItem('music');
+		if(music == null){
 			$('.volume-toggle').removeClass('off');
+			sessionStorage.setItem('music', '1');
 			audioBg.play();
 		}
-	}
-});
+		else {
+			if(music == 1 && $(audioBg).length > 0){
+				$('.volume-toggle').removeClass('off');
+				audioBg.play();
+			}
+		}
+	});

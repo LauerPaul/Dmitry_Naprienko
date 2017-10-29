@@ -1,3 +1,6 @@
+#terms {
+	background: $white !important;
+}
 section.terms {
 	&::after {
 		content: '';
@@ -13,6 +16,13 @@ section.terms {
 	    letter-spacing: 0px;
     	text-align: center;
     	margin-top: -40px;
+    	@include animation(none);
+
+    	&::after,
+    	&::before {
+    		display: none !important;
+    		@include animation(none);
+    	}
 	}
 }
 

@@ -34,6 +34,14 @@ header {
     }
 }
 
+#terms:not(.menuOpen) {
+	header {
+		span.white {
+	    	color: #383838 !important;
+	    }
+	}
+}
+
 @include keyframes (header){
 	from {top: -70px;opacity: 0;}
 	50% {opacity: 0;}

@@ -102,6 +102,7 @@
 	    height: 100%;
 	    padding-left: 103px;
 	    padding-top: 18px;
+	    cursor: default;
 
 		@media (max-width: 1380px) {
 			padding-left: 75px;
@@ -117,6 +118,7 @@
 			letter-spacing: 44px;
 		    line-height: 64px;
 		    color: $white;
+		    @include transition(all 0.4s);
 	
 			@media (max-width: 1380px) {
 				font-size: 68px;
@@ -147,6 +149,13 @@
 					letter-spacing: 18px;
 				}
 			}
+	    }
+
+	    & > div:hover {
+	    	cursor: pointer;
+	    	p {
+				color: #383838;
+	    	}
 	    }
     }
 }

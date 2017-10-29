@@ -114,6 +114,40 @@ footer {
 
 }
 
+.menuOpen {
+	.footer, footer {
+		.volume-toggle, a {
+			&:hover {
+				color: #383838;
+			}
+		}
+	}
+}
+
+#terms {
+	.footer, footer {
+		.volume-toggle{
+			display: none !important;
+		} 
+	}
+	.menu {
+		.line-bottom {
+			display: none !important;
+		}
+	}
+}
+
+#terms:not(.menuOpen) {
+	.footer, footer {
+		a {
+			color: #383838;
+			&:hover {
+				color: $brand-primary;
+			}
+		}
+	}
+}
+
 @include keyframes (footer){
 	from {bottom: -70px;opacity: 0;}
 	50% {opacity: 0;}

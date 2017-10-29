@@ -17,7 +17,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
   </head>
-  <body>
+  <body id="terms">
     <header class="clearfix">
       <div class="column float-left"><span class="white">DMITRY</span></div>
       <div class="column float-right text-right"><span class="white">naprienko</span></div>
@@ -84,38 +84,76 @@
           </div>
         </div>
       </section>
-      <section class="section contacts">
-        <div class="title-wrapper normal center d-flex justify-content-center align-items-center">
-          <h1>Contacts</h1>
-        </div>
-        <div class="text-contacts d-flex justify-content-center flex-wrap align-items-center">
-          <div class="wrapper-section">
-            <div class="contacts-title">
-              <h4> <span class="animation_item">Do you have an interesting project?</span><br><span class="animation_item">Let's talk about that!</span></h4>
-            </div>
-            <div>
-              <div class="column">
-                <p class="decor">Email</p>
-                <p> <span>dmitrynaprienko@gmail.com</span></p>
-              </div>
-              <div class="column">
-                <p class="decor">Location</p>
-                <p> <span>Kyiv, Ukraine</span></p>
-              </div>
-              <div class="column">
-                <p class="decor">Skype</p>
-                <p> <span>dmitry_naprienko</span></p>
-              </div>
-              <div class="clearfix"></div>
-              <div class="button-wrapper">
-                <button type="button" onclick="$('.contatcsModal').modal('show')">Start a project</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="thanks-block"><span>Thanks to <a href="https://lauer.agency/" target="_blank">Lauer</a>&nbsp;for the web development.</span></div>
-      </section>
     </div>
-    <div class="mask-nextPage"></div>
+    <div class="footer float-left">
+      <button class="volume-toggle off" data-toggle-text="Music doesn't play">Music plays</button>
+    </div>
+    <footer>
+      <div class="column float-right text-right">
+        <ul class="list-inline social">
+          <li class="list-inline-item"><a href="#" target="_blank">Behance</a></li>
+          <li class="list-inline-item"><a href="#" target="_blank">Dribbble</a></li>
+          <li class="list-inline-item"><a href="#" target="_blank">Facebook</a></li>
+        </ul>
+      </div>
+    </footer>
+    <div class="menu">
+      <div class="menu-wrapper d-flex justify-content-center align-items-center"> 
+        <div class="navigation d-flex align-items-center"> 
+          <nav>
+            <ul>
+              <li><a href="#designer">Main</a></li>
+              <li><a href="#designer">About me</a></li>
+              <li><a href="#designer">Services</a></li>
+              <li><a href="#designer">Contacts</a></li>
+            </ul>
+          </nav>
+        </div><a class="portfolio-text d-flex align-items-center flex-wrap" href="#">
+          <div>
+            <p>port <span>-</span></p>
+            <div>
+              <p class="mini">View portfolio</p>
+            </div>
+            <p>folio</p>
+          </div></a>
+      </div><a class="line-bottom" href="#"><span>terms of cooperation</span></a>
+    </div>
+    <div class="modal fade contatcsModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <form action="">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span></span></button>
+            <h2 class="title">It’s time, let’s start a project!<br>Together we will find a creative solution.</h2>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-4">
+                  <p class="label">Full name</p>
+                  <input class="form-control" type="text" name="name" placeholder="Your full name"/>
+                </div>
+                <div class="col-md-4">
+                  <p class="label">email address</p>
+                  <input class="form-control" type="text" name="mail" placeholder="Your email address"/>
+                </div>
+                <div class="col-md-4">
+                  <p class="label">company name</p>
+                  <input class="form-control" type="text" name="company" placeholder="Name of your company"/>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <p class="label">your message</p>
+                  <textarea class="form-control" type="text" name="message" placeholder="Your message or comment"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <button class="send" type="button">send</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
